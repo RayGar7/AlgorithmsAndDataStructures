@@ -1,5 +1,5 @@
 # gcd: int x int -> int
-# return the greatest common divisor between two integers m and n
+# O(n) recursive implementation with return the greatest common divisor between two integers m and n
 def gcd(m,n):
     r = m % n
     

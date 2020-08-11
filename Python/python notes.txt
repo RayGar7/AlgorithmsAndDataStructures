@@ -1,0 +1,16 @@
+python notes
+
+print("Hello World"); or print("Hello World") prints Hello World.
+
+Class names start with an uppercase letter. All other identifiers start with a lowercase letter.
+
+Starting an identifier with a single leading underscore indicates that the identifier is private.
+
+Starting an identifier with two leading underscores indicates a strongly private identifier.
+
+If the identifier also ends with two trailing underscores, the identifier is a language-defined special name
+
+
+The semicolon ( ; ) allows multiple statements on the single line given that neither statement starts a new code block. Here is a sample snip using the semicolon -
+
+import sys; x = 'foo'; sys.stdout.write(x + '\n')
