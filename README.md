@@ -78,6 +78,17 @@ baseAndHeightToArea: finds a triangle's area given its height and base length
 
 lAndWtoArea: finds a rectangle's area given its length and width
 
+### One Away
+This is a problem that I have to credit the author from the book"Cracking the Code Interview" by Gayle Laakman McDowell, however the solution is all mine and it has passed every test case descirbed in the book's problem statement.
+> "There are three types of edits that can be performed on strings: insert a character, remove a character,
+> or replace a character. Given two strings write a function to see if they are one edit awy from being the same character." - Gayle Laakman McDowell
+
+Test cases and their result in my implementation:
+pale, ple -> True
+pales, pale -> True
+pales, bale -> True
+pale, bake -> False
+
 ## Java
 
 ## Javascript
