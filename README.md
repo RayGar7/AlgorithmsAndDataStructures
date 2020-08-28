@@ -84,10 +84,10 @@ This is a problem that I have to credit the author from the book"Cracking the Co
 > or replace a character. Given two strings write a function to see if they are one edit awy from being the same character." - Gayle Laakman McDowell
 
 Test cases and their result in my implementation:
-pale, ple -> True
-pales, pale -> True
-pales, bale -> True
-pale, bake -> False
+> pale, ple -> True
+> pales, pale -> True
+> pales, bale -> True
+> pale, bake -> False
 
 ## Java
 

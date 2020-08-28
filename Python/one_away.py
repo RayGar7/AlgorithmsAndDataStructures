@@ -5,7 +5,6 @@
 # in "Cracking the Coding Interview" 6th edition
 # 8/27/2020 9:04 every test case in the book has passed
 
-
 def one_away(str1, str2):
     # if strings are zero edits away:
     if str1 == str2:
@@ -33,9 +32,7 @@ def isAReplaceEdit(s1, s2):
     else:
         differentCharacters = 0
         for i in range(0, len(s1)):
-            if s1[i] == s2[i]:
-                continue
-            else:
+            if s1[i] != s2[i]:
                 differentCharacters += 1
                 if differentCharacters > 1:
                     return False
@@ -44,12 +41,14 @@ def isAReplaceEdit(s1, s2):
 
 
 def isARemoveEdit(s1, s2):
-    if len(s1) == len(s2) - 1:
-        for c in s1:
-            if c in s2:
-                continue
-            else:
-                return False
-        return True
-    else:
+    if len(s1) != len(s2) - 1:
         return False
+    # if s1 is precisely one character shorter than s2:
+    # check if every character in s1 is in s2
+    for c in s1:
+        if c not in s2:
+            return False
+    return True
+
+
+print(one_away("abd", "abcd"))
