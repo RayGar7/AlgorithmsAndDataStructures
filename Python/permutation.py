@@ -1,3 +1,4 @@
+# return true iff str1 and str2 are permutations of each other
 def check_permutation(str1, str2):
     if len(str1) != len(str2):
         return False
@@ -18,3 +19,5 @@ def check_permutation(str1, str2):
             str_dict2[c] += 1
 
     return str_dict1 == str_dict2
+
+# todo write a function to calculate how many permutations a given string has
