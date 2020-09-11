@@ -34,6 +34,8 @@ class LinkedList:
             else:
                 current_node = current_node.next
 
+                
+
     # deletes all occurences of data
     def delete_all(self, data):
         current_node = self.get_head()
@@ -52,6 +54,9 @@ class LinkedList:
         return self._tail
 
     def print_all(self):
+        if not self._head:
+            print("the list is empty")
+            return
         print("printing all:")
         current_node = self.get_head()
         while (current_node):
@@ -70,6 +75,32 @@ class LinkedList:
         if (not current_node):
             print("node not found")
 
+    def runner_search(self, data):
+        single_step_p = self.get_head()
+        double_step_p = self.get_head()
+        while (single_step_p):
+            if (single_step_p.data == data):
+                return single_step_p
+            else:
+                single_step_p = single_step_p.next
+            if (double_step_p.data == data):
+                return double_step_p
+            elif (double_step_p.next.next):
+                double_step_p = double_step_p.next.next
+        return None
+
+    def delete_list(self):
+        # use the runner method to delete all node in the list, even though in python that's not necessary but for the sake of problem solving skills
+        single_step_p = self.get_head()
+        while (single_step_p != self._tail):
+            temp = single_step_p
+            single_step_p = single_step_p.next
+            del temp
+        del self._tail
+        self._head = None
+        self._tail = None
+        
+
 
 class Node:
     def __init__(self, data, next):
@@ -83,19 +114,27 @@ class Node:
 
 
 linked_list1 = LinkedList()
-linked_list1.insert(1)
-linked_list1.insert(2)
-linked_list1.insert(3)
-print(linked_list1.get_head().data)
-linked_list1.insert(4)
-linked_list1.insert(3)
-linked_list1.insert(3)
+# linked_list1.insert(1)
+# linked_list1.insert(2)
+# linked_list1.insert(3)
+# print(linked_list1.get_head().data)
+# linked_list1.insert(4)
+# linked_list1.insert(3)
+# linked_list1.insert(3)
+# linked_list1.print_all()
+# linked_list1.delete(3)
+# linked_list1.print_all()
+# linked_list1.delete_all(3)
+# linked_list1.print_all()
+# linked_list1.edit_node(4, 40)
+# linked_list1.print_all()
+# linked_list1.edit_node(41, 5)
+# linked_list1.print_all()
+for i in range(0, 20):
+    linked_list1.insert(i)
 linked_list1.print_all()
-linked_list1.delete(3)
-linked_list1.print_all()
-linked_list1.delete_all(3)
-linked_list1.print_all()
-linked_list1.edit_node(4, 40)
-linked_list1.print_all()
-linked_list1.edit_node(41, 5)
+
+for i in range(0, 20):
+    print(linked_list1.runner_search(i).data)
+linked_list1.delete_list()
 linked_list1.print_all()
