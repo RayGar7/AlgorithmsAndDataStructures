@@ -1,5 +1,6 @@
 // implements selection sort
 function mySort(arr) {
+    // create a shallow copy of arr (so as to not override the original array and return a totally new array)
     let sortedArr = [...arr];
     
     for (let i = 0; i < sortedArr.length; i++) {

@@ -1,0 +1,3 @@
+Describe how you could use a single array to implement three stacks
+
+-I could divide the stack in three partitions. My implementation of this is in SingleArray3Stack

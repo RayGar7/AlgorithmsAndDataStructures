@@ -22,5 +22,8 @@ def urlify(s):
     return url
 
 
+#todo: implment the same function in place
+
+
 # Show test case from Cracking the Interview
 print(urlify("Mr John Smith     "))

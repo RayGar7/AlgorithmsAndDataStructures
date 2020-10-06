@@ -10,7 +10,7 @@ def one_away(str1, str2):
     if str1 == str2:
         return True
     # if either string has one character appended from the other
-    if str1 in str2 or str2 in str1:
+    if (str1 in str2 and len(str1) + 1 == len(str2)) or (str2 in str1 and len(str2) +1 == len(str1)):
         return True
 
     # if either string has a remove edit from the other string

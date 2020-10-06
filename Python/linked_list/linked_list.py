@@ -274,30 +274,6 @@ class Node:
 
 
 linked_list1 = LinkedList()
-# uncomment to test remove_dups
-# #create a linked list with 20 nodes each one a duplicate
-# for i in range(0, 10):
-#     linked_list1.insert(i)
-#     linked_list1.insert(i)
-
-# linked_list1.print_all()
-
-# linked_list1.remove_dups()
-
-# linked_list1.print_all()
-
-
-
-# uncomment to test kth_to_the_last(0)
-# print(linked_list1.kth_to_the_last(3).data)
-
-#uncomment to test delete from middle
-# linked_list1.delete_from_middle(linked_list1.get_head())
-
-# linked_list1.print_all()
-# print(linked_list1._size)
-
-
 
 def partition(linked_list, partition):
     current_node = linked_list.get_head()
@@ -317,14 +293,8 @@ def partition(linked_list, partition):
 
     return linked_list_left
 
-# #create a linked list with 10 nodes
-# for i in range(0, 10):
-#     linked_list1.insert(9-i)
 
-# partition(linked_list1, 5)
-
-
-
+# todo: this does not take into account differently sized lists
 def sum_lists(l1,l2):
     node_1 = l1._head
     node_2 = l2._head
@@ -345,33 +315,3 @@ def sum_lists(l1,l2):
         travel_node = travel_node.next
 
     return sum_list
-
-# linked_list1.insert(7)
-# linked_list1.insert(1)
-# linked_list1.insert(6)
-
-# linked_list2 = LinkedList()
-# linked_list2.insert(5)
-# linked_list2.insert(9)
-# linked_list2.insert(2)
-
-# mysum = sum_lists(linked_list1, linked_list2)
-
-# mysum.print_all()
-
-# #uncomment to test is_palinrome
-# linked_list1.insert(1)
-# linked_list1.insert(2)
-# linked_list1.insert(2)
-# linked_list1.insert(1)
-
-#print(linked_list1.is_palindrome())
-
-# uncomment to test reverse
-
-for i in range(0, 3):
-    linked_list1.insert(i)
-
-reversed = linked_list1.reverse()
-
-reversed.print_all()
