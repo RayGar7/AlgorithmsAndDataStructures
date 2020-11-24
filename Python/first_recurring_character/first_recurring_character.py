@@ -14,7 +14,7 @@ def main(s):
 #print(main("ACB"))
 
 # same problem but in place
-# O(n)
+# O(n^2)
 def in_place(s):
     i = 1
     while i < len(s):
