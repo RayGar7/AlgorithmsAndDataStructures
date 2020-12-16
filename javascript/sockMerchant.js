@@ -9,7 +9,7 @@ function sockMerchant(n, ar) {
         });
     }
 
-    //console.log('sockObj', sockObj);
+    //this is brute force and I want a more efficient algorithm
 
     for (let i = 0; i < sockObj.length; i++) {
         for (let j = i + 1; j < sockObj.length; j++) {
@@ -22,12 +22,6 @@ function sockMerchant(n, ar) {
         }
     }
 
-    /*
-    for (let i = 0; i < sockObj.length; i++) {
-
-    }
-    
-    */
 
     return pairs;
 
