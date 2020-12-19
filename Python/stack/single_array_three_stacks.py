@@ -16,15 +16,15 @@ class FixedMultiStack:
 
     # data is the data to pass and stack is the stack - 1 to choose from the 3 stacks (0-based)
     def push(self, data, stack):
-        relative_index = stack-1
-
-        # is given stack is full
-        if (self.stack_tops[relative_index] == self.get_array_size() * stack / 3):
+        relative_index = stack-1    # the stack (of which there are 3)
+        absolute_index = self.stack_tops[relative_index]
+        # if given stack is full
+        if (absolute_index == self.get_array_size() * stack / 3):
             raise Exception("Given stack is full")
+        # else
         else:
-            absolute_index = self.stack_tops[relative_index]
             self.array[absolute_index] = data
-            self.stack_tops[stack-1] += 1
+            self.stack_tops[relative_index] += 1
 
 
     def pop(self, stack):
@@ -52,8 +52,8 @@ class FixedMultiStack:
         return self.array[absolute_index]
 
 
-    def peek_all(self):
-        pass
+    def print_all(self):
+        print(self.array)
 
 
 
@@ -62,15 +62,18 @@ stack1 = FixedMultiStack(6)
 stack1.push(1, 1)
 stack1.push(2, 2)
 stack1.push(3, 3)
-print(stack1.array)
-stack1.pop(1)
-print(stack1.array)
-stack1.pop(2)
-print(stack1.array)
-stack1.pop(3)
-print(stack1.array)
-stack1.push(1, 1)
-stack1.push(2, 2)
-stack1.push(3, 3)
-print(stack1.array)
-print(stack1.peek_at_stack(3))
+# stack1.print_all()
+# stack1.pop(1)
+# stack1.print_all()
+# stack1.pop(2)
+# stack1.print_all()
+# stack1.pop(3)
+# stack1.print_all()
+# stack1.push(1, 1)
+# stack1.push(2, 2)
+# stack1.push(3, 3)
+stack1.print_all()
+stack1.push(4, 3)
+stack1.print_all()
+#print(stack1.peek_at_stack(3))
+stack1.push(5, 3)
