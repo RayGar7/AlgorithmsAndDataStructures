@@ -29,3 +29,17 @@ def get_hour_glass(arr, start_row, start_column):
 
     sum = arr[r][c] + arr[r][c+1] + arr[r][c+2] + arr[r+1][c+1] +arr[r+2][c] + arr[r+2][c+1] + arr[r+2][c+2]
     return sum
+
+
+
+
+# sample
+sample = [
+    [1, 1, 1, 0, 0, 0],
+    [0, 1, 0, 0, 0, 0],
+    [1, 1, 1, 0, 0, 0],
+    [0, 0, 2, 4, 4, 0],
+    [0, 0, 0, 2, 0, 0],
+    [0, 0, 1, 2, 4, 0]
+]
+get_hour_glass(sample, 0, 1)

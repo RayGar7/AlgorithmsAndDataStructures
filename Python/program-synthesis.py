@@ -23,3 +23,5 @@ def program_synthesis(x):
     return result
 
 print(program_synthesis("aaaabbbcca"))
+print(program_synthesis("xxyyz"))
+print(program_synthesis("abc"))
